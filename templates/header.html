@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="./static/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <ul class="nav">
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+                {% if not logged_in %}
+                <li>
+                    <a href="{{ url_for('login') }}">Login</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('register') }}">Register</a>
+                </li>
+                {% endif %}
+                {% if logged_in %}
+                <li>
+                    <a href="{{ url_for('logout') }}">Log Out</a>
+                </li>
+                {% endif %}
+            </ul>
+
+        </div>

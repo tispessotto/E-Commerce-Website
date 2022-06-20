@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+     text-align: center;
+     display: inline-block;
+      margin: 10px;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+    vertical-align: middle;
+}
+
+.nav {
+    display: block;
+    padding: 11px;
+    margin-right: 5px;
+}

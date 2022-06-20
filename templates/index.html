@@ -1,0 +1,23 @@
+{% block content %}
+{% include "header.html" %}
+
+
+<ul>
+    {% for product in products %}
+    <li>
+        <img alt="product" src="{{ product.photo_url }}">
+        <h2>{{ product.name }}</h2>
+        <h3>${{ product.price }}</h3>
+        {% if logged_in %}
+        <a href="{{ url_for('checkout', product_id=product.id) }}">BUY</a>
+        {% else %}
+        <a href="{{ url_for('login') }}">BUY</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>
+{% endblock %}
