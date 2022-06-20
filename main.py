@@ -142,12 +142,12 @@ def checkout(product_id):
         customer_email=None,
         expires_at=int(time.time()) + 3600  # 1 hour expiry
     )
-    print(s)
-    session_id = s['id']
-    webbrowser.open(s['url'])
-    checkout_sess = stripe.checkout.Session.retrieve(session_id)
-    print('status        :', checkout_sess['status'])  # open, complete, expired
-    print('payment_status:', checkout_sess['payment_status'])  # paid, unpaid, no_payment_required
+     webbrowser.open(s['url'])
+    #print(s)
+    #session_id = s['id']   
+    #checkout_sess = stripe.checkout.Session.retrieve(session_id)
+    #print('status        :', checkout_sess['status'])  # open, complete, expired
+    #print('payment_status:', checkout_sess['payment_status'])  # paid, unpaid, no_payment_required
 
 
 @app.route("/order/success")
