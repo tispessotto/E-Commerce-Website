@@ -12,7 +12,7 @@ import webbrowser
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'XxXXXxXxX'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///e-commerce.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 YOUR_DOMAIN = 'http://localhost:4242'
